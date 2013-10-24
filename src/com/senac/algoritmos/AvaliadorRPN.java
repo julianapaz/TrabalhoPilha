@@ -28,11 +28,7 @@ public class AvaliadorRPN {
 		return pilha.pop();
 	}
 
-	/*
-	 * public static final char PARENTESES ='('; public static final char
-	 * MAIS='+'; public static final char MENOS='-'; public static final char
-	 * DIVISAO='/'; public static final char MULTIPLICACAO='*';
-	 */
+
 
 	public static void inversorPosFixo(String expressao)throws PilhaCheia, PilhaVazia, InvalidOperator{
 		Scanner entrada= new Scanner(expressao);
@@ -86,7 +82,7 @@ public class AvaliadorRPN {
 				   que o operador do topo da pilha seja "(",
 				   ou que a pilha esteja vazia. Empilhar o operador.*/
 					}
-					else if(prioridade(opLido)>prioridade(pilha.peek()))
+					else if (prioridade(opLido)>prioridade(pilha.peek()))
 							pilha.push(opLido);
 
 					else
@@ -119,7 +115,7 @@ public class AvaliadorRPN {
 			saida += " "+pilha.pop();
 	}	
 
-	System.out.print("Notação Fixa Polonesa: "+saida+"\n");	
+	System.out.print("Notação"+saida+"\n");	
 	System.out.print(AvaliadorRPN.avalia(saida));
 }
 
@@ -155,6 +151,7 @@ public static int prioridade(String operador) throws InvalidOperator {
 		precedencia = 1;
 		break;
 
+	//n precisa
 	case ')':
 		precedencia = 0;
 		break;
