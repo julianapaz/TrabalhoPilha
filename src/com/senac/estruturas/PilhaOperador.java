@@ -15,7 +15,6 @@ public class PilhaOperador {
 	{
 		if (isEmpty())
 			throw new PilhaVazia();
-		
 		return dados[topo - 1]; 
 	}
 
